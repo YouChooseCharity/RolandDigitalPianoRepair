@@ -155,6 +155,30 @@
             color: #667eea;
         }
 
+        .media-block {
+            margin: 25px 0;
+        }
+
+        .media-block img,
+        .media-block video {
+            display: block;
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+            background-color: #000;
+        }
+
+        .media-block figcaption {
+            max-width: 900px;
+            margin: 10px auto 0;
+            color: #666;
+            font-size: 0.95em;
+            text-align: center;
+        }
+
         .cta-buttons {
             display: flex;
             gap: 15px;
@@ -247,34 +271,33 @@
     <nav>
         <ul>
             <li><a href="#overview">Overview</a></li>
-            
-            
-            <li><a href="#getting-started">Getting Started</a></li>
             <li><a href="#safety">Safety</a></li>
+            <li><a href="#models">Supported Models</a></li>
+            <li><a href="#getting-started">Getting Started</a></li>
             <li><a href="#contributing">Contributing</a></li>
-            
+            <li><a href="#support">Support</a></li>
         </ul>
     </nav>
- <!-- Safety Section -->
-<section id="safety">
+
+    <div class="container">
+        <!-- Safety Section -->
+        <section id="safety">
             <h2><span class="emoji">⚠️</span>Safety & Disclaimer</h2>
             <div class="warning">
                 <strong>Important Safety Notice</strong>
                 <p>Before opening the piano, please note:</p>
                 <ul>
-                    <li>Always disconnect power before openning the piano. Live wires may be exposed.</li>
-                    
-                    <li>The authors are not liable for any damage resulting from following these guides</li>
+                    <li>Always disconnect power before opening the piano. Live wires may be exposed.</li>
+                    <li>The authors are not liable for any damage resulting from following these guides.</li>
                 </ul>
             </div>
         </section>
-    
-    <div class="container">
+
         <!-- Overview Section -->
         <section id="overview">
             <h2><span class="emoji">📋</span>Overview</h2>
-            <p> How do I open the case?</p>
-            <p> With a phillips screw driver, you can remove 8 screws, 6 from the bottom and two from the sides near the front.</p>
+            <p>How do I open the case?</p>
+            <p>With a Phillips screwdriver, you can remove 8 screws: 6 from the bottom and 2 from the sides near the front.</p>
         </section>
 
         <!-- Supported Models Section -->
@@ -283,13 +306,11 @@
             <div class="models">
                 <div class="model-card">
                     <h4>Roland RD-250s</h4>
-                    I cannot guarantee the instructions are identical for this model. I only have the Roland RD-300s. However, the Users Manual covers 
-                both models, so I assume they are similar.</p>
-                    <p></p>
+                    <p>I cannot guarantee the instructions are identical for this model. I only have the Roland RD-300s. However, the user's manual covers both models, so I assume they are similar.</p>
                 </div>
                 <div class="model-card">
                     <h4>Roland RD-300s</h4>
-                    <p>These instructions and images work for the RD-300s model because that's the model I'm working with. 
+                    <p>These instructions and images work for the RD-300s model because that's the model I'm working with.</p>
                 </div>
             </div>
         </section>
@@ -299,33 +320,44 @@
             <h2><span class="emoji">🛠️</span>Getting Started</h2>
             <div class="steps">
                 <div class="step">
-                    <strong>Step 1:</strong> 
-                    <p> Unplug the piano from the mains power supply!
-                    </p>
+                    <strong>Step 1:</strong>
+                    <p>Unplug the piano from the mains power supply.</p>
                 </div>
                 <div class="step">
-                    <strong>Step 2:</strong> 
-                    <p>Turn the piano upside down. 
-                        There are 6 screw to remove from the bottom; see the image below./p>
+                    <strong>Step 2:</strong>
+                    <p>Turn the piano upside down. There are 6 screws to remove from the bottom; see the image below.</p>
                 </div>
+
+                <!-- Image file in the same directory as instructions.html -->
+                <figure class="media-block">
+                    <img src="rd300s-bottom-screws.jpg" alt="Bottom of the Roland RD-300s showing the six screws to remove before opening the case">
+                    <figcaption>Bottom view of the RD-300s showing the six screws to remove.</figcaption>
+                </figure>
+
                 <div class="step">
-                    <strong>Step 3:</strong> 
-                    <p>Turn the piano back to the normal position. Remove the screw on the left side near the front. Then the corresponding one on the right side.</p>
+                    <strong>Step 3:</strong>
+                    <p>Turn the piano back to the normal position. Remove the screw on the left side near the front, then the corresponding one on the right side.</p>
                 </div>
                 <div class="step">
                     <strong>Step 4:</strong>
                     <p>Lift gently on the front of the piano.</p>
                 </div>
+
+                <!-- Video file in the same directory as instructions.html -->
+                <figure class="media-block">
+                    <video controls preload="metadata">
+                        <source src="rd300s-opening-case.mp4" type="video/mp4">
+                        Your browser does not support the video tag. You can download the video file named rd300s-opening-case.mp4 from this directory.
+                    </video>
+                    <figcaption>Video demonstration of opening the RD-300s case.</figcaption>
+                </figure>
             </div>
         </section>
-
-       
-        
 
         <!-- Contributing Section -->
         <section id="contributing">
             <h2><span class="emoji">🤝</span>Contributing</h2>
-            <p>We welcome contributions from the community! If you have:</p>
+            <p>We welcome contributions from the community. If you have:</p>
             <ul>
                 <li>Additional repair techniques</li>
                 <li>Improvements to existing guides</li>
@@ -346,9 +378,9 @@
             <h2><span class="emoji">📞</span>Support & Resources</h2>
             <h3>Get Help</h3>
             <ul>
-                <li><strong>Issues & Questions:</strong> Use the GitHub Issues tab to ask questions or report problems</li>
-                <li><strong>Discussions:</strong> Share experiences and get advice from the community</li>
-                <li><strong>Wiki:</strong> Check our wiki for additional information and FAQs</li>
+                <li><strong>Issues & Questions:</strong> Use the GitHub Issues tab to ask questions or report problems.</li>
+                <li><strong>Discussions:</strong> Share experiences and get advice from the community.</li>
+                <li><strong>Wiki:</strong> Check our wiki for additional information and FAQs.</li>
             </ul>
             <div class="cta-buttons">
                 <a href="https://github.com/YouChooseCharity/RolandDigitalPianoRepair/issues" class="btn">Open an Issue</a>
@@ -359,7 +391,7 @@
         <!-- Footer CTA -->
         <section style="text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
             <h2 style="color: white; border-bottom-color: white;">Go back to the main page</h2>
-            <p style="font-size: 1.1em; margin-bottom: 20px;">Go back here.</p>
+            <p style="font-size: 1.1em; margin-bottom: 20px;">Return to the main repository page.</p>
             <a href="https://github.com/YouChooseCharity/RolandDigitalPianoRepair" class="btn" style="background-color: white; color: #667eea; font-weight: bold;">Visit the Repository</a>
         </section>
     </div>
